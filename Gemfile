@@ -48,3 +48,13 @@ group :development do
   gem 'binding_of_caller'
   gem 'meta_request'
 end
+
+# Simple Form
+gem 'simple_form', git: "https://github.com/plataformatec/simple_form.git"
+
+# Nested Forms
+gem 'nested_form'
+
+# Carrierwave (Image processing)
+gem 'carrierwave'
+gem 'rmagick'
