@@ -49,6 +49,10 @@ group :development do
   gem 'meta_request'
 end
 
+group :production do 
+  gem 'mysql2'
+end
+
 # Simple Form
 gem 'simple_form', git: "https://github.com/plataformatec/simple_form.git"
 
