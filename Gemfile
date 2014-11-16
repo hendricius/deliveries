@@ -1,9 +1,11 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.0'
-# Use sqlite3 as the database for Active Record
+gem 'rails', '4.1.7'
+# Database
 gem 'sqlite3'
+gem "pg"
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -47,10 +49,6 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
-end
-
-group :production do 
-  gem 'mysql2'
 end
 
 # Simple Form
