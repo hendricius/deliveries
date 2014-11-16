@@ -17,3 +17,6 @@
 
 # Ignore database.yml
 /config/database.yml
+
+# https://github.com/sstephenson/rbenv-vars
+.rbenv-vars
