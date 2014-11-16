@@ -32,7 +32,7 @@ gem 'spring',        group: :development
 gem 'slim-rails'
 
 # Bootstrap styles
-gem 'bootstrap-sass', '~> 3.1.1'
+gem 'bootstrap-sass', '~> 3.3.1'
 
 # Font awesome fonts
 gem "font-awesome-rails"
