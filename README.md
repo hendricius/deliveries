@@ -2,6 +2,9 @@
 
 Just another boilerplate rails app. Comes preconfigured with several aweseome gems to make building UIs a lot easier.
 
+* Setup for .rbenv
+* Capistrano for deployment
+
 The UI gems include:
 
 * Boostrap

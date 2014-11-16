@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/capistrano/rbenv.git
+  revision: 2332dba20ec1f8c8cb7a9cd38770d71f5c4bf5a9
+  specs:
+    capistrano-rbenv (2.0.2)
+      capistrano (~> 3.1)
+      sshkit (~> 1.3)
+
+GIT
   remote: https://github.com/plataformatec/simple_form.git
   revision: ed3de1c2b566a962697529e824953f6b280e2867
   specs:
@@ -48,6 +56,16 @@ GEM
       thor
     builder (3.2.2)
     callsite (0.0.11)
+    capistrano (3.1.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (~> 1.3)
+    capistrano-bundler (1.1.3)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
+    capistrano-rails (1.1.2)
+      capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -63,6 +81,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    colorize (0.7.3)
     debug_inspector (0.0.2)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
@@ -116,6 +135,9 @@ GEM
       railties (~> 4.1)
     multi_json (1.10.1)
     nested_form (0.3.2)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.9.1)
     pg (0.17.1)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -180,6 +202,10 @@ GEM
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
     sqlite3 (1.3.9)
+    sshkit (1.5.1)
+      colorize
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
     temple (0.6.7)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
@@ -204,6 +230,10 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass (~> 3.3.1)
   bourbon
+  capistrano (~> 3.1.0)
+  capistrano-bundler (~> 1.1.2)
+  capistrano-rails (~> 1.1.1)
+  capistrano-rbenv!
   carrierwave
   coffee-rails (~> 4.0.0)
   font-awesome-rails
