@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+company = Company.new
+company.password = 1234
+company.password_confirmation = 1234
+company.email = "test@test.de"
+company.address = "Im Schliepas 13, Northeim"
+company.contact_person_name = "Benedikt Brendel"
+company.description = "Apotheke Roth"
+company.save
