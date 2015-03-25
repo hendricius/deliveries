@@ -68,3 +68,5 @@ gem 'capistrano-rails', '~> 1.1.2'
 
 # Add this if you're using rbenv
 gem 'capistrano-rbenv', github: "capistrano/rbenv"
+
+gem 'bootstrap-generators', git: 'git://github.com/decioferreira/bootstrap-generators.git'

@@ -7,6 +7,13 @@ GIT
       sshkit (~> 1.3)
 
 GIT
+  remote: git://github.com/decioferreira/bootstrap-generators.git
+  revision: 94e0d163c0ccf8d6b18e551d2e68dbf581b95fa8
+  specs:
+    bootstrap-generators (3.3.1)
+      railties (>= 3.1.0)
+
+GIT
   remote: https://github.com/plataformatec/simple_form.git
   revision: c679153ee99aefa39a7583564f2cd4bf9c0ca00b
   specs:
@@ -263,6 +270,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
+  bootstrap-generators!
   bootstrap-sass (~> 3.3.1)
   bourbon
   capistrano (~> 3.3)
