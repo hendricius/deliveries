@@ -1,0 +1,42 @@
+.page-header
+  = link_to drivers_path, class: 'btn btn-default' do 
+    span.glyphicon.glyphicon-list-alt
+    |  Back 
+  = link_to edit_driver_path(@driver), class: 'btn btn-primary' do 
+    span.glyphicon.glyphicon-pencil
+    |  Edit 
+  h1
+    | Show driver
+dl.dl-horizontal
+  dt
+    | Name:
+  dd
+    = @driver.name
+  dt
+    | Phone:
+  dd
+    = @driver.phone
+  dt
+    | Company:
+  dd
+    = @driver.company_id
+  dt
+    | Address:
+  dd
+    = @driver.address
+  dt
+    | Max capacity:
+  dd
+    = @driver.max_capacity
+  dt
+    | Current capacity:
+  dd
+    = @driver.current_capacity
+  dt
+    | Latitude:
+  dd
+    = @driver.latitude
+  dt
+    | Longitude:
+  dd
+    = @driver.longitude

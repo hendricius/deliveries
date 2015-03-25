@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :drivers
+
   resources :orders
 
   match '*path' => 'static#home', via: [:get, :post]

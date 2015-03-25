@@ -1,0 +1,55 @@
+.page-header
+  = link_to new_driver_path, class: 'btn btn-primary' do 
+    span.glyphicon.glyphicon-plus
+    |  New Driver
+  h1
+    | Listing drivers
+
+.table-responsive
+  table.table.table-striped.table-bordered.table-hover
+    thead
+      tr
+        th
+          | Name
+        th
+          | Phone
+        th
+          | Company
+        th
+          | Address
+        th
+          | Max capacity
+        th
+          | Current capacity
+        th
+          | Latitude
+        th
+          | Longitude
+        th
+        th
+        th
+    tbody
+      - @drivers.each do | driver |
+        tr
+          td
+            = driver.name
+          td
+            = driver.phone
+          td
+            = driver.company_id
+          td
+            = driver.address
+          td
+            = driver.max_capacity
+          td
+            = driver.current_capacity
+          td
+            = driver.latitude
+          td
+            = driver.longitude
+          td
+            = link_to 'Show', driver
+          td
+            = link_to 'Edit', edit_driver_path(driver) 
+          td
+            = link_to 'Destroy', driver, method: :delete, data: { confirm: 'Are you sure?' } 
