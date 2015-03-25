@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.all
+    @orders = current_user.orders.order("id ASC")
   end
 
   # GET /orders/1
@@ -25,6 +25,7 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     @order = Order.new(order_params)
+    @order.company = current_user
 
     respond_to do |format|
       if @order.save
@@ -41,6 +42,7 @@ class OrdersController < ApplicationController
   # PATCH/PUT /orders/1.json
   def update
     respond_to do |format|
+      @order.company = current_user
       if @order.update(order_params)
         format.html { redirect_to @order, notice: 'Order was successfully updated.' }
         format.json { render :show, status: :ok, location: @order }
@@ -69,6 +71,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:content, :driver_id, :company_id, :latitude, :longitude, :address, :capacity)
+      params.require(:order).permit(:content, :driver_id, :company_id, :from_address, :to_address, :capacity)
     end
 end

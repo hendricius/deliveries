@@ -4,7 +4,7 @@ class DriversController < ApplicationController
   # GET /drivers
   # GET /drivers.json
   def index
-    @drivers = Driver.all
+    @drivers = current_user.drivers.order("id ASC")
   end
 
   # GET /drivers/1
@@ -25,6 +25,7 @@ class DriversController < ApplicationController
   # POST /drivers.json
   def create
     @driver = Driver.new(driver_params)
+    @driver.company = current_user
 
     respond_to do |format|
       if @driver.save
@@ -41,6 +42,7 @@ class DriversController < ApplicationController
   # PATCH/PUT /drivers/1.json
   def update
     respond_to do |format|
+      @driver.company = current_user
       if @driver.update(driver_params)
         format.html { redirect_to @driver, notice: 'Driver was successfully updated.' }
         format.json { render :show, status: :ok, location: @driver }

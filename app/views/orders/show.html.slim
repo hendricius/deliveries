@@ -1,10 +1,10 @@
 .page-header
-  = link_to orders_path, class: 'btn btn-default' do 
+  = link_to orders_path, class: 'btn btn-default' do
     span.glyphicon.glyphicon-list-alt
-    |  Back 
-  = link_to edit_order_path(@order), class: 'btn btn-primary' do 
+    |  Back
+  = link_to edit_order_path(@order), class: 'btn btn-primary' do
     span.glyphicon.glyphicon-pencil
-    |  Edit 
+    |  Edit
   h1
     | Show order
 dl.dl-horizontal
@@ -21,17 +21,29 @@ dl.dl-horizontal
   dd
     = @order.company_id
   dt
-    | Latitude:
+    | From Latitude:
   dd
-    = @order.latitude
+    = @order.from_latitude
   dt
-    | Longitude:
+    | From Longitude:
   dd
-    = @order.longitude
+    = @order.from_longitude
   dt
-    | Address:
+    | From Address:
   dd
-    = @order.address
+    = @order.from_address
+  dt
+    | To Latitude:
+  dd
+    = @order.to_latitude
+  dt
+    | To Longitude:
+  dd
+    = @order.to_longitude
+  dt
+    | To Address:
+  dd
+    = @order.to_address
   dt
     | Capacity:
   dd

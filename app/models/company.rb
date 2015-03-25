@@ -6,4 +6,9 @@ class Company < ActiveRecord::Base
   validates :password_confirmation, presence: true
 
   validates :email, uniqueness: true
+
+  has_many :orders, dependent: :destroy
+  has_many :drivers, dependent: :destroy
+  geocoded_by :address
+  after_validation :geocode
 end

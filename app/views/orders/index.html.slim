@@ -1,5 +1,5 @@
 .page-header
-  = link_to new_order_path, class: 'btn btn-primary' do 
+  = link_to new_order_path, class: 'btn btn-primary' do
     span.glyphicon.glyphicon-plus
     |  New Order
   h1
@@ -16,11 +16,9 @@
         th
           | Company
         th
-          | Latitude
+          | From Address
         th
-          | Longitude
-        th
-          | Address
+          | To Address
         th
           | Capacity
         th
@@ -36,16 +34,14 @@
           td
             = order.company_id
           td
-            = order.latitude
+            = order.from_address
           td
-            = order.longitude
-          td
-            = order.address
+            = order.to_address
           td
             = order.capacity
           td
             = link_to 'Show', order
           td
-            = link_to 'Edit', edit_order_path(order) 
+            = link_to 'Edit', edit_order_path(order)
           td
-            = link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } 
+            = link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' }

@@ -128,6 +128,7 @@ GEM
     font-awesome-rails (4.2.0.0)
       railties (>= 3.2, < 5.0)
     formatador (0.2.5)
+    geocoder (1.2.6)
     globalid (0.3.0)
       activesupport (>= 4.1.0)
     guard (2.10.5)
@@ -306,6 +307,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.1.0)
   font-awesome-rails
+  geocoder
   guard-livereload
   guard-rails
   jbuilder (~> 2.0)
