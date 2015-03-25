@@ -1,0 +1,51 @@
+.page-header
+  = link_to new_order_path, class: 'btn btn-primary' do 
+    span.glyphicon.glyphicon-plus
+    |  New Order
+  h1
+    | Listing orders
+
+.table-responsive
+  table.table.table-striped.table-bordered.table-hover
+    thead
+      tr
+        th
+          | Content
+        th
+          | Driver
+        th
+          | Company
+        th
+          | Latitude
+        th
+          | Longitude
+        th
+          | Address
+        th
+          | Capacity
+        th
+        th
+        th
+    tbody
+      - @orders.each do | order |
+        tr
+          td
+            = order.content
+          td
+            = order.driver_id
+          td
+            = order.company_id
+          td
+            = order.latitude
+          td
+            = order.longitude
+          td
+            = order.address
+          td
+            = order.capacity
+          td
+            = link_to 'Show', order
+          td
+            = link_to 'Edit', edit_order_path(order) 
+          td
+            = link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } 
