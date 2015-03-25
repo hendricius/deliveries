@@ -70,3 +70,4 @@ gem 'capistrano-rails', '~> 1.1.2'
 gem 'capistrano-rbenv', github: "capistrano/rbenv"
 
 gem 'bootstrap-generators', git: 'git://github.com/decioferreira/bootstrap-generators.git'
+gem "sorcery", git: "https://github.com/NoamB/sorcery.git"

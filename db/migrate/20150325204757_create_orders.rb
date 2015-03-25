@@ -4,9 +4,12 @@ class CreateOrders < ActiveRecord::Migration
       t.text :content
       t.integer :driver_id
       t.integer :company_id
-      t.float :latitude
-      t.float :longitude
-      t.string :address
+      t.float :from_latitude
+      t.float :from_longitude
+      t.string :from_address
+      t.float :to_latitude
+      t.float :to_longitude
+      t.string :to_address
       t.integer :capacity
 
       t.timestamps null: false
