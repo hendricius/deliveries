@@ -1,4 +1,8 @@
 class CompaniesController < ApplicationController
+
+  def dashboard
+  end
+  
   private
 
   def company_params
