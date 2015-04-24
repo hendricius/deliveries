@@ -1,0 +1,30 @@
+.page-header
+  = link_to tours_path, class: 'btn btn-default' do 
+    span.glyphicon.glyphicon-list-alt
+    |  Back 
+  = link_to edit_tour_path(@tour), class: 'btn btn-primary' do 
+    span.glyphicon.glyphicon-pencil
+    |  Edit 
+  h1
+    | Show tour
+dl.dl-horizontal
+  dt
+    | Tour:
+  dd
+    = @tour.tour
+  dt
+    | Capacityarray:
+  dd
+    = @tour.capacityarray
+  dt
+    | Time:
+  dd
+    = @tour.time
+  dt
+    | Driver:
+  dd
+    = @tour.driver_id
+  dt
+    | Kind:
+  dd
+    = @tour.kind

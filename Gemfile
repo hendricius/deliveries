@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0'
 # Database
 gem 'sqlite3'
-gem "pg"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.1'
@@ -59,7 +58,6 @@ gem 'nested_form'
 
 # Carrierwave (Image processing)
 gem 'carrierwave'
-gem 'rmagick'
 
 # Deploying.
 gem 'capistrano', '~> 3.3'

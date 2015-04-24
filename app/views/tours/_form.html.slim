@@ -1,0 +1,35 @@
+= form_for(@tour, html: { class: "form-horizontal", role: "form" }) do |f|
+  - if @tour.errors.any?
+    .alert.alert-danger.alert-dismissable role="alert"
+      button.close type="button" data-dismiss="alert"
+        span aria-hidden="true"
+          | &times;
+        span.sr-only
+          | Close
+      h4= "#{pluralize(@tour.errors.count,"error")} prohibited this tour from being saved:"
+      ul
+        - @tour.errors.full_messages.each do |msg|
+          li= msg
+  .form-group
+    = f.label :tour, class: "col-sm-2 control-label"
+    .col-sm-10
+      = f.text_area :tour, class: "form-control"
+  .form-group
+    = f.label :capacityarray, class: "col-sm-2 control-label"
+    .col-sm-10
+      = f.text_area :capacityarray, class: "form-control"
+  .form-group
+    = f.label :time, class: "col-sm-2 control-label"
+    .col-sm-10
+      = f.number_field :time, class: "form-control"
+  .form-group
+    = f.label :driver_id, class: "col-sm-2 control-label"
+    .col-sm-10
+      = f.number_field :driver_id, class: "form-control"
+  .form-group
+    = f.label :kind, class: "col-sm-2 control-label"
+    .col-sm-10
+      = f.number_field :kind, class: "form-control"
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      = f.submit class: "btn btn-primary"

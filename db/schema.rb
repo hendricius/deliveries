@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150325210356) do
+ActiveRecord::Schema.define(version: 20150424151246) do
 
   create_table "companies", force: :cascade do |t|
     t.string   "email",               null: false
@@ -54,6 +54,16 @@ ActiveRecord::Schema.define(version: 20150325210356) do
     t.integer  "capacity"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+  end
+
+  create_table "tours", force: :cascade do |t|
+    t.text     "tour"
+    t.text     "capacityarray"
+    t.integer  "time"
+    t.integer  "driver_id"
+    t.integer  "kind"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end
