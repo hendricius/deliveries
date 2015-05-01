@@ -1,9 +1,9 @@
 .page-header
   = link_to new_order_path, class: 'btn btn-primary' do
     span.glyphicon.glyphicon-plus
-    |  New Order
+    |  Neuer Auftrag
   h1
-    | Listing orders
+    | Aufträge
 
 .table-responsive
   table.table.table-striped.table-bordered.table-hover
@@ -44,4 +44,4 @@
           td
             = link_to 'Edit', edit_order_path(order)
           td
-            = link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' }
+            = link_to 'Delete', order, method: :delete, data: { confirm: 'Are you sure?' }

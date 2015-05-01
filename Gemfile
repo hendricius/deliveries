@@ -39,6 +39,11 @@ gem "font-awesome-rails"
 # CSS mixins
 gem 'bourbon'
 
+# Chartkick for nice charts
+gem "chartkick"
+# Selection on date
+gem 'groupdate'
+
 gem "minitest-rails"
 
 group :development do
@@ -58,6 +63,9 @@ gem 'nested_form'
 
 # Carrierwave (Image processing)
 gem 'carrierwave'
+
+# Google Maps for rails
+gem 'gmaps4rails'
 
 # Deploying.
 gem 'capistrano', '~> 3.3'

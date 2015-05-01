@@ -1,9 +1,7 @@
 .page-header
-  = link_to new_tour_path, class: 'btn btn-primary' do
-    span.glyphicon.glyphicon-plus
-    |  New Tour
+
   h1
-    | Listing tours
+    | Touren
 
 .table-responsive
   table.table.table-striped.table-bordered.table-hover
@@ -12,32 +10,15 @@
         th
           | Tour
         th
-          | Capacityarray
-        th
           | Time
         th
           | Driver
-        th
-          | Kind
-        th
-        th
-        th
     tbody
       - @tours.each do | tour |
         tr
           td
             = tour.tour
           td
-            = tour.capacityarray
-          td
             = tour.time
           td
             = tour.driver_id
-          td
-            = tour.kind
-          td
-            = link_to 'Show', tour
-          td
-            = link_to 'Edit', edit_tour_path(tour)
-          td
-            = link_to 'Destroy', tour, method: :delete, data: { confirm: 'Are you sure?' }

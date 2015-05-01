@@ -7,13 +7,13 @@ nav.navbar.navbar-fixed-top.navbar-inverse role="navigation"
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      = link_to "Sample", root_path, class: "navbar-brand"
+      = link_to "[Tourenplaner]", root_path, class: "navbar-brand"
     .collapse.navbar-collapse#bs-example-navbar-collapse-1
       - if logged_in?
         ul.nav.navbar-nav
-          li= link_to "Orders", orders_path
-          li= link_to "Drivers", drivers_path
-          li= link_to "Tours", tours_path
+          li= link_to "Aufträge", orders_path
+          li= link_to "Fahrer", drivers_path
+          li= link_to "Touren", tours_path
           li= link_to "Logout", logout_path, method: :post
       - else
         ul.nav.navbar-nav

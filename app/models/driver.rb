@@ -1,5 +1,6 @@
 class Driver < ActiveRecord::Base
   belongs_to :company
+  has_one :tour
 
   def coordinates
     # FIXME implement
